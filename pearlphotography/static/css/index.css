@@ -1,0 +1,102 @@
+@media screen and (min-width: 640px) {
+	section {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		min-height: 100vh;
+		height: fit-content;
+	}
+
+	#about_us {
+		background-image: url(../images/back_about.jpg);
+		background-position: center;
+		background-size: cover;
+	}
+
+	#contato {
+		background-image: url(../images/back_contato.jpg);
+		background-position: center;
+		background-size: cover;
+	}
+}
+
+.text-container {
+	background: rgba(255, 250, 255, 0.6);
+	text-align: justify;
+	padding-top: 1em;
+}
+
+a {
+	color: #343a40;
+	display: block;
+}
+
+h1 {
+	color: #730e72;
+}
+
+.btn-primary {
+	background: #730e72;
+	border-color: #730e72;
+	color: #ffffff;
+	margin: 2em;
+}
+
+.btn-primary:hover {
+	transform: scale(1.05);
+	background: #800e72;
+	border-color: #730e72;
+	color: #ffffff;
+}
+
+.quote {
+	color: #990f72;
+	text-align: center;
+}
+
+.profile-picture {
+	border-radius: 50%;
+	border: 1px solid #ffdbee;
+	width: inherit;
+	max-width: 300px;
+	margin: auto;
+}
+
+/* PACOTES */
+
+.pricing-divider {
+	border-radius: 20px;
+	background: #730e72;
+	padding: 1em 0 4em;
+	text-align: center;
+}
+
+.card-body span {
+	margin-left: 15px;
+}
+
+.list-group-item {
+	border: none
+}
+
+.price-panel {
+	transition: all 150ms ease-out;
+}
+
+.price-panel:hover {
+	transform: scale(1.05);
+}
+
+.notes {
+	margin-top: 2em;
+	font-size: 0.8em
+}
+
+/* FORM */
+.contactForm {
+	margin-top: 30px;
+	height: 600px;
+	padding-top: 40px;
+	background: rgba(255, 255, 255, 0.7);
+}

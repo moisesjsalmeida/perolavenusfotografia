@@ -1,0 +1,83 @@
+/* General settings */
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: "Montserrat";
+    padding-top: 50px;
+    text-shadow: 1px 2px 2px #f3f3f6;
+    height: 100%;
+    background-color: #f3f3f6;
+}
+
+/* Navbar Personalization */
+#navbar {
+    background: linear-gradient(135deg, rgb(139, 5, 137) 0%, #730e72 50%, rgb(31, 0, 24) 100%);
+}
+
+#logo {
+    width: 109px;
+    height: auto;
+}
+
+#navbar a {
+    color: #fff;
+    display: block;
+}
+
+.navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+/* Animations */
+.animated {
+    opacity: 0;
+    transition:
+        opacity 400ms ease-in,
+        transform 200ms ease-in;
+    transform: translateY(10%);
+}
+
+.animated.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    align-self: flex-end;
+    padding-top: 10px;
+    height: auto;
+    background-color: #242729;
+    color: white;
+    text-shadow: 1px 1px 1px #f3f3f6;
+    font-size: 0.8em;
+}
+
+footer ul li {
+    list-style-type: none;
+    margin-left: -3.5em;
+}
+
+.phone {
+    color: white;
+    position: relative;
+    display: inline;
+    padding: 0.5em;
+}
+
+.social {
+    color: white;
+    width: inherit;
+    font-size: 3em;
+    padding: 0.1em;
+}
+
+.social:hover {
+    transform: scale(1.15);
+}

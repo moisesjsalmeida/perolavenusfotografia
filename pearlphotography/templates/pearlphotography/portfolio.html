@@ -1,0 +1,24 @@
+{% extends "pearlphotography/base.html" %}
+{% load static %}
+
+{% block styles %}
+
+<link rel="stylesheet" href="{% static 'css/portfolio.css' %}">
+
+{% endblock %}
+
+{% block body%}
+<!-- Portfolio section -->
+    <section id="portifolio">
+        <div id="gallery" class="container"></div>
+    </section>
+
+{% endblock %}
+
+{% block scripts %}
+    <!-- Passing photos variable -->
+    <script> var photos = {{ photos|safe }} </script>
+
+    <script src="{% static 'js/portfolio.js' %}"></script>
+
+{% endblock %}

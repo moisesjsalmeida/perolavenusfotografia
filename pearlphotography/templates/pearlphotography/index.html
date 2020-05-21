@@ -1,0 +1,118 @@
+{% extends "pearlphotography/base.html" %}
+{% load static %}
+
+{% block styles %}
+
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+
+{% endblock %}
+
+{% block body%}
+
+    <!-- About us section -->
+    <section class="about_us" id="about_us">
+    	<div class="container container-fluid text-container">
+    		<div class="row align-items-center">
+    			<div class="col-md-6 col-lg-8">
+    				<h1>Pérola Vênus</h1>
+                    <p>Sempre soube diferenciar muito bem o que eu gostava do que não gostava. O que me agradava aos olhos e o que eu sentia que poderia ter sido melhor executado ou planejado. Gosto de estar cercada e admirar que realmente considero simples, belo e perfeito. </p>
+                    <p>Há cerca de 3 anos, comecei a enxergar de forma única cada pessoa, lugar e momento. Essa mudança ocorreu com o Autismo “batendo” em minha porta. Minha filha foi diagnosticada com TEA (Transtorno do Espectro Autista), fazendo com que meu mundo, minhas concepções e meu modo de pensar e viver mudasse completamente, fazendo com que eu enxergasse o mundo de maneira diferente.   Enxergando de uma maneira diferenciada podemos capturar a essência de cada acontecimento, valorizando cada gesto e conquista.</p>
+                    <p>Eu, Pérola, tento captar através das minhas lentes a essência de cada momento, seja em um evento social ou em um ensaio fotográfico realizado dentro do estúdio, assim sendo cada sessão fotográfica única.</p>                  
+                </div>
+    			<div class="col text-center">
+    				<img src="{% static 'images/profile.jpg' %}" class="img-fluid profile-picture">
+    			</div>
+    		</div>
+            <div class="row">
+                <div class="col">
+                    <div class="text-center"><a href="/portfolio"><button class="btn btn-primary">Conheça nosso Portfolio</button></a></div>
+                </div>
+            </div>
+    	</div>
+    </section>
+
+    <!-- Prices -->
+    <section class='pacotes animated' id='pacotes'>
+        <div class='container container-fluid'>
+            <h1 class="display-3 text-center">Pacotes em destaque</h1>
+        
+                <div class="row container">
+                       
+                    <div class="col price-panel">
+                        <div class="pricing-divider ">
+                            <h1 class="text-light">ENSAIO EXTERNO</h1>
+                            <h4 class="my-0 display-2 text-light font-weight-normal mb-3"><span class="h3">A partir de R$</span>300</h4>
+                        </div>
+                        <div class="card-body bg-white mt-0 shadow">
+                            <ul class="list-unstyled">
+                                <li class="list-group-item"><span class="fa-li text-center"><i class="fas fa-clock"></i></span>1h30min de ensaio</li>
+                                <li class="list-group-item"><span class="fa-li text-center"><i class="fas fa-map-marked-alt"></i></span>Locação opcional (sujeito a alteração de valores)</li>
+                                <li class="list-group-item"><span class="fa-li text-center"><i class="fas fa-images"></i></span>Fotos ilimitadas</li>
+                                <li class="list-group-item"><span class="fa-li text-center"><i class="fas fa-cloud-download-alt"></i></span>Entrega online, CD/DVD ou Pendrive</li>
+                                <li class="list-group-item"><span class="fa-li text-center"><i class="fas fa-magic"></i></span>Cabelo e maquiagem (opcional, consulte valores)</li>
+                                <li class="list-group-item"><span class="fa-li text-center"><i class="fas fa-calendar-alt"></i></span>Entrega em até 7 dias úteis</li>
+                            </ul>
+                        </div>
+                    </div>
+        
+                    <div class="col price-panel">
+                        <div class="pricing-divider ">
+                            <h1 class="text-light">EVENTOS</h1>
+                            <h4 class="my-0 display-2 text-light font-weight-normal mb-3"><span class="h3">A partir de R$</span>300</h4>
+                        </div>
+                        <div class="card-body bg-white mt-0 shadow">
+                            <ul class="list-unstyled">
+                                <li class="list-group-item"><span class="fa-li text-center"><i class="fas fa-camera"></i></span>Casamentos, aniversários ou cerimônias</li>
+                                <li class="list-group-item"><span class="fa-li text-center"><i class="fas fa-clock"></i></span>Até 8 horas de evento</li>
+                                <li class="list-group-item"><span class="fa-li text-center"><i class="fas fa-images"></i></span>100 fotos editadas</li>
+                                <li class="list-group-item"><span class="fa-li text-center"><i class="fas fa-cloud-download-alt"></i></span>Entrega online, CD/DVD ou Pendrive</li>
+                                <li class="list-group-item"><span class="fa-li text-center"><i class="fas fa-file-image"></i></span>JPEG de alta resolução</li>
+                                <li class="list-group-item"><span class="fa-li text-center"><i class="fas fa-calendar-alt"></i></span>Entrega em até 25 dias úteis</li>
+                            </ul>
+                        </div>
+                    </div>
+        
+                </div>
+                    
+            <div class="notes">
+                <p><em>*Valores sujeitos a alterações em caso de grandes distâncias ou necessidade de horas extras.</em></p>
+                <p><em>*Para personalização de pacotes, outros tipos de eventos e preços para álbuns impressos, entrar em contato.</em></p>
+            </div>
+        </div>    
+    </section>
+
+    <!-- Contact section -->
+    <section class="contato animated" id="contato">
+        <!-- Alert submitted form -->
+        <div class="alert alert-success alert-dismissable fade show" role="alert" style="display:none">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            Mensagem enviada com sucesso!
+        </div>
+
+        <!-- Contact Form -->
+        <div class="container container-fluid text-container contactForm">
+            <div class="main-div">
+                <div class="panel">
+                    <h2>Contato</h2>
+                    <p>Solicite um orçamento ou agende seu ensaio!</p>
+                </div>
+                <form method="" role="form" action="" id="formulario">
+                    {% csrf_token %}
+                    {% for field in form %}
+                        <div class='form-group'> {{ field }} </div>
+                    {% endfor %}
+                    <button type="submit" class="btn btn-primary" value="Send">Enviar Mensagem</button>
+                </form>
+            </div>           
+        </div>
+    </section>
+
+{% endblock %}
+
+{% block scripts %}
+
+<script src="{% static 'js/scripts.js' %}"></script>
+
+{% endblock %}
