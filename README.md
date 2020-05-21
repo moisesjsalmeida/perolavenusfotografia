@@ -1,4 +1,4 @@
-![Pérola Vênus Fotografia](https://github.com/moisesjsalmeida/perolavenusfotografia/blob/master/pearlphotography/static/images/logo.png)
+# Pérola Vênus Fotografia
 
 Este projeto foi realizado como conclusão para o curso *CS50 Introduction to computer Science*, realizado através do programa HarvardX.
 Durante o andamento do referido curso, houve o uso da linguagem Python, o que me deixou mais confortável para a utilização de frameworks como [Flask](https://flask.palletsprojects.com/en/1.1.x/) e [Django](https://www.djangoproject.com/). Desde então, foram realizadas pequenas mudanças, adequando o site para os conhecimentos que foram adquiridos. Ele se tornou uma "área de testes" em que pratico alguns conceitos novos.
