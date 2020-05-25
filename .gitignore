@@ -4,6 +4,9 @@ media/
 # Database
 *.db
 
+#Personal Data
+somemarks.md
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
